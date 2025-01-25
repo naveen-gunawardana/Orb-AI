@@ -1,0 +1,57 @@
+{
+  "name": "soul-character",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@react-three/drei": "^9.120.4",
+    "@react-three/fiber": "^8.17.10",
+    "cra-template": "1.2.0",
+    "dotenv": "^16.4.7",
+    "gsap": "^3.12.5",
+    "python3": "^0.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
+    "three": "^0.171.0"
+  },
+  "scripts": {
+    "react-start": "NODE_OPTIONS=--no-warnings react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject",
+    "start": "concurrently \"npm run react-start\" \"source venv/bin/activate && python3 bot.py\""
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "rules": {
+      "no-unused-vars": [
+        "warn",
+        {
+          "varsIgnorePattern": "React"
+        }
+      ],
+      "no-warning-comments": 0
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "concurrently": "^9.1.1",
+    "customize-cra": "^1.0.0",
+    "react-app-rewired": "^2.2.1"
+  }
+}
